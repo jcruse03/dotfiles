@@ -8,7 +8,7 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/.dotfiles_old             # old dotfiles backup directory
-files="bashrc bash_prompt bash_profile aliases"    # list of files/folders to symlink in homedir
+files="bashrc bash_prompt bash_profile tmux.conf vimrc aliases"    # list of files/folders to symlink in homedir
 
 ##########
 
@@ -31,9 +31,9 @@ for file in $files; do
 done
 
 # create source.sh for reloading all
-rm mysource.sh
-for file in $files; do
-    echo source ~/.$file >> mysource.sh
-done
-echo "echo done" >> mysource.sh
-chmod 755 $dir/mysource.sh
+#rm mysource.sh
+#for file in $files; do
+#    echo source ~/.$file >> mysource.sh
+#done
+#echo "echo done" >> mysource.sh
+#chmod 755 $dir/mysource.sh
