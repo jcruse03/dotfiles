@@ -3,6 +3,7 @@ export PATH="$HOME/bin:$PATH";
 
 # set editor to vim
 export EDITER='vim'
+#export VISUAL='vim'
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
