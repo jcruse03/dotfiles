@@ -24,6 +24,9 @@ else # macOS `ls`
 	export LSCOLORS='BxBxhxDxfxhxhxhxhxcxcx'
 fi
 
+# VBoxManage
+alias vbm="VBoxManage"
+
 # my scripts
 alias mysource="~/dotfiles/mysource.sh"
 
