@@ -1,0 +1,57 @@
+Xft.autohint:  0
+Xft.lcdfilter: lcddefault
+Xft.hintstyle: hintfull
+Xft.hinting:   1
+Xft.antialias: 1
+Xft.dpi:       96
+Xft.rgba:      rgb
+
+URxvt.font: xft:Roboto Mono:pixelsize=14:Regular
+URxvt.boldFont: xft:Roboto Mono:pixelsize=14:Bold
+URxvt.italicFont: xft:Roboto Mono:pixelsize=14:Italic
+URxvt.boldItalicFont: xft:Roboto Mono:pixelsize=14:Bold:Italic
+URxvt.letterSpace: 0
+URxvt.scrollBar: false
+URxvt.cursorBlink: 1
+
+! special
+*.foreground:   #ffffff
+*.background:   #000000
+*.cursorColor:  #ffffff
+
+! black
+*.color0:       #000000
+*.color8:       #343434
+
+! red
+*.color1:       #e92f2f
+*.color9:       #e92f2f
+
+! green
+*.color2:       #0ed839
+*.color10:      #0ed839
+
+! yellow
+*.color3:       #dddd13
+*.color11:      #dddd13
+
+! blue
+*.color4:       #3b48e3
+*.color12:      #3b48e3
+
+! magenta
+*.color5:       #f996e2
+*.color13:      #CE00CE
+
+! cyan
+*.color6:       #23edda
+*.color14:      #23edda
+
+! white
+*.color7:       #ffffff
+*.color15:      #f9f9f9
+
+! transperency
+!*.alpha: 180
+urxvt*depth: 32
+urxvt*background: rgba:0000/0000/0200/c800
