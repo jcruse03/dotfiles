@@ -15,6 +15,7 @@ URxvt.scrollBar: false
 URxvt.cursorBlink: 1
 
 ! Copy Paste
+! requires urxvt-perls package
 !-*- Perl extensions -*-
 URxvt.perl-ext-common: default,selection-to-clipboard,pasta,matcher,keyboard-select
 URxvt.keysym.M-u:     perl:url-select:select_next
