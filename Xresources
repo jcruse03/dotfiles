@@ -14,6 +14,18 @@ URxvt.letterSpace: 0
 URxvt.scrollBar: false
 URxvt.cursorBlink: 1
 
+! Copy Paste
+!-*- Perl extensions -*-
+URxvt.perl-ext-common: default,selection-to-clipboard,pasta,matcher,keyboard-select
+URxvt.keysym.M-u:     perl:url-select:select_next
+URxvt.url-launcher:   /usr/bin/google-chrome-stable
+URxvt.underlineURLs:  True
+URxvt.matcher.button: 1 
+URxvt.keysym.M-Escape:perl:keyboard-select:activate
+URxvt.keysym.Control-v:perl:pasta:paste
+! Comment this if you don't want copy when text is selected
+URxvt.clipboard.autocopy: true
+
 ! special
 *.foreground:   #ffffff
 *.background:   #000000

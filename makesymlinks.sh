@@ -30,6 +30,9 @@ for file in $files; do
     ln -s $dir/$file ~/.$file
 done
 
+# create symlink to pasta script fro urxvt, copy/paste script
+sudo cp pasta /usr/lib/urxvt/perl/pasta
+
 # create source.sh for reloading all
 #rm mysource.sh
 #for file in $files; do
