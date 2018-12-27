@@ -1,6 +1,11 @@
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";
 
+export TERMINAL='urxvt'
+
+# Adds `~/.scripts` and all subdirectories to $PATH
+export PATH="$(du "$HOME/.scripts/" | cut -f2 | tr '\n' ':')$PATH"
+
 # set editor to vim
 export EDITER='vim'
 #export VISUAL='vim'
