@@ -6,10 +6,11 @@ Xft.antialias: 1
 Xft.dpi:       96
 Xft.rgba:      rgb
 
-URxvt.font: xft:Roboto Mono:pixelsize=14:Regular
-URxvt.boldFont: xft:Roboto Mono:pixelsize=14:Bold
-URxvt.italicFont: xft:Roboto Mono:pixelsize=14:Italic
-URxvt.boldItalicFont: xft:Roboto Mono:pixelsize=14:Bold:Italic
+! Font requires the nerd font package. "nerd-fonts-complete"
+URxvt.font: xft:RobotoMono Nerd Font Mono:pixelsize=14:Regular
+URxvt.boldFont: xft:RobotoMono Nerd Font Mono:pixelsize=14:Bold
+URxvt.italicFont: xft:RobotoMono Nerd Font Mono:pixelsize=14:Italic
+URxvt.boldItalicFont: xft:RobotoMono Nerd Font Mono:pixelsize=14:Bold:Italic
 URxvt.letterSpace: 0
 URxvt.scrollBar: false
 URxvt.cursorBlink: 1
