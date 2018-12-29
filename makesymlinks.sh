@@ -32,7 +32,7 @@ done
 
 # create symlink to pasta script fro urxvt, copy/paste script
 sudo cp pasta /usr/lib/urxvt/perl/pasta
-
+sudo chmod +x /usr/lib/urxvt/perl/pasta
 # create source.sh for reloading all
 #rm mysource.sh
 #for file in $files; do
