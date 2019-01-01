@@ -18,7 +18,10 @@ set $term --no-startup-id $TERMINAL
 font pango:monospace 12
 
 # thin borders
-hide_edge_borders both
+#hide_edge_borders both
+#default_border pixel 3
+
+#for_window [class="^.*"] border pixel 2
 
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -87,10 +90,10 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+- split h
+bindsym $mod+backslash split h
 
 # split in vertical orientation
-bindsym $mod+| split v
+bindsym $mod+underscore split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -121,10 +124,10 @@ bindsym $mod+a focus parent
 # delete or uncomment the following lines if you do not have it or do not
 # want it
 for_window [class="^.*"] border pixel 2
-gaps inner 2
-gaps outer 2
+gaps inner 5
+gaps outer 5
 #smart_gaps on
-#smart_borders on
+smart_borders on
 
 set $mode_gaps Gaps: (o) outer, (i) inner
 set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
@@ -238,16 +241,19 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+set $active-border	 #ff9900	
 set $bg-color            #2f343f
 set $inactive-bg-color   #2f343f
 set $text-color          #f3f4f5
 set $inactive-text-color #676e7d
 set $urgent-bg-color     #e53935
-set $indicator-color     #a0a0a0
+#set $indicator-color     #a0a0a0
+set $indicator-color	 #1dbef4
+set $black		 #000000
 
 # set window colors
 #                       border             background         text                 indicator
-client.focused          $bg-color          $bg-color          $text-color          $indicator-color
+client.focused          $active-border     $active-border     $text-color          $indicator-color
 client.unfocused        $inactive-bg-color $inactive-bg-color $inactive-text-color $indicator-color
 client.focused_inactive $inactive-bg-color $inactive-bg-color $inactive-text-color $indicator-color
 client.urgent           $urgent-bg-color   $urgent-bg-color   $text-color          $indicator-color
@@ -265,11 +271,11 @@ bar {
 	position top        
 
 	colors {
-		background $bg-color
+		background $black
 	    	separator #757575
 		#                  border             background         text
-		focused_workspace  $bg-color          $bg-color          $text-color
-		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+		focused_workspace  $bg-color          $black          $active-border
+		inactive_workspace $inactive-bg-color $black $inactive-text-color
 		urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
 	}
 }
@@ -325,3 +331,5 @@ exec --no-startup-id "sleep 5s && kalu"
 exec setxkbmap -option "caps:swapescape"
 # set wallpaper
 exec --no-startup-id feh --bg-scale ~/Pictures/8UgQsyE.jpg
+# Unclutter makes the mouse invisible after a brief period
+exec --no-startup-id unclutter

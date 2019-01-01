@@ -6,6 +6,9 @@ export TERMINAL='urxvt'
 # Adds `~/.scripts` and all subdirectories to $PATH
 export PATH="$(du "$HOME/.scripts/" | cut -f2 | tr '\n' ':')$PATH"
 
+# tell ranger to use user config only
+export RANGER_LOAD_DEFAULT_RC='FALSE'
+
 # set editor to vim
 export EDITER='vim'
 #export VISUAL='vim'
