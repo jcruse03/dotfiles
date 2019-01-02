@@ -7,3 +7,4 @@ urxvt
 i3blocks-gaps-git
 gnome-screenshot
 compton
+unclutter
