@@ -171,13 +171,13 @@ mode "$mode_gaps_outer" {
 set $w1 "1:Web "
 set $w2 "2:Web "
 set $w3 "3:Terminal "
-set $w4 "4"
-set $w5 "5"
+set $w4 "4:Comon "
+set $w5 "5:Incognito "
 set $w6 "6"
 set $w7 "7"
-set $w8 "8"
-set $w9 "9"
-set $w10 "10"
+set $w8 "8:Scratch "
+set $w9 "9:Chat"
+set $w10 "10:Htop "
 
 # switch to workspace
 bindsym $mod+1 workspace $w1 

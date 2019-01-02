@@ -8,7 +8,7 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/.dotfiles_old             # old dotfiles backup directory
-files="bashrc bash_prompt bash_profile tmux.conf vimrc aliases config/i3/config Xdefaults Xresources scripts/i3cmds/ddspawn scripts/i3cmds/tmuxdd"    # list of files/folders to symlink in homedir
+files="bashrc bash_prompt bash_profile tmux.conf vimrc aliases config/i3/config Xdefaults Xresources scripts/i3cmds/ddspawn scripts/i3cmds/tmuxdd i3blocks.conf"    # list of files/folders to symlink in homedir
 
 ##########
 
