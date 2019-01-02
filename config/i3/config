@@ -330,6 +330,7 @@ exec --no-startup-id "sleep 5s && kalu"
 # Swap escape and caps lock
 exec setxkbmap -option "caps:swapescape"
 # set wallpaper
-exec --no-startup-id feh --bg-scale ~/Pictures/8UgQsyE.jpg
+#exec --no-startup-id feh --bg-scale ~/Pictures/8UgQsyE.jpg
+exec --no-startup-id feh --bg-scale ~/dotfiles/wallpapers/ic8ubjf-arch-linux-wallpaper.png
 # Unclutter makes the mouse invisible after a brief period
 exec --no-startup-id unclutter
