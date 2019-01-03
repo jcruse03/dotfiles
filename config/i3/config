@@ -274,8 +274,8 @@ bar {
 		background $black
 	    	separator #757575
 		#                  border             background         text
-		focused_workspace  $bg-color          $black          $active-border
-		inactive_workspace $inactive-bg-color $black $inactive-text-color
+		focused_workspace  $bg-color          $bg-color          $active-border
+		inactive_workspace $inactive-bg-color $black             $inactive-text-color
 		urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
 	}
 }
