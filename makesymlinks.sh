@@ -30,6 +30,13 @@ for file in $files; do
     ln -s $dir/$file ~/.$file
 done
 
+# handle directory for qutebrowser, this can be done better for directories
+echo "Moving .config/qutebrowser/ to $olddir"
+mv ~/.config/qutebrowser/ $olddir
+echo "Creating symlink to dotfiles/config/qutebrowser/ in home directory."
+# the best way to think about ln is create a link to first argument in second argument
+ln -s $dir/config/qutebrowser ~/.config
+
 # create symlink to pasta script fro urxvt, copy/paste script
 sudo cp pasta /usr/lib/urxvt/perl/pasta
 sudo chmod +x /usr/lib/urxvt/perl/pasta
