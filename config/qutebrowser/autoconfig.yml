@@ -7,3 +7,8 @@ settings:
     global: true
   backend:
     global: webengine
+  bindings.commands:
+    global:
+      normal:
+        D: tab-close
+        d: null
