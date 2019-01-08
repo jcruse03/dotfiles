@@ -8,7 +8,7 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/.dotfiles_old             # old dotfiles backup directory
-files="bashrc bash_prompt bash_profile tmux.conf vimrc aliases config/i3/config Xdefaults Xresources scripts/i3cmds/ddspawn scripts/i3cmds/tmuxdd"    # list of files/folders to symlink in homedir
+files="bashrc bash_prompt bash_profile tmux.conf vimrc aliases config/i3/config Xdefaults Xresources scripts/i3cmds/ddspawn scripts/i3cmds/tmuxdd i3blocks.conf"    # list of files/folders to symlink in homedir
 
 ##########
 
@@ -29,6 +29,13 @@ for file in $files; do
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file ~/.$file
 done
+
+# handle directory for qutebrowser, this can be done better for directories
+echo "Moving .config/qutebrowser/ to $olddir"
+mv ~/.config/qutebrowser/ $olddir
+echo "Creating symlink to dotfiles/config/qutebrowser/ in home directory."
+# the best way to think about ln is create a link to first argument in second argument
+ln -s $dir/config/qutebrowser ~/.config
 
 # create symlink to pasta script fro urxvt, copy/paste script
 sudo cp pasta /usr/lib/urxvt/perl/pasta
