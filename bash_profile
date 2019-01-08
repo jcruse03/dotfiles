@@ -10,7 +10,7 @@ export PATH="$(du "$HOME/.scripts/" | cut -f2 | tr '\n' ':')$PATH"
 export RANGER_LOAD_DEFAULT_RC='FALSE'
 
 # set editor to vim
-export EDITER='vim'
+export EDITOR='vim'
 #export VISUAL='vim'
 
 # Load the shell dotfiles, and then some:

@@ -1,1 +1,20 @@
-curl -s ipinfo.io/json | grep -oE "\b([0-9]{1,3}\.){3}[0-9]{1,3}\b"
+#myip="$(curl -s ipinfo.io/json | grep -oE "\b([0-9]{1,3}\.){3}[0-9]{1,3}\b")"
+myip="$(curl -s https://myexternalip.com/json | grep -oE "\b([0-9]{1,3}\.){3}[0-9]{1,3}\b")"
+testip=$"71.82.181.136"
+BLUE=\#1c6fff
+RED=\#f20e0e
+
+#echo -e $BLUE$testip$NC
+
+#echo $myip
+
+if [ $testip = $myip ]
+then
+  echo $myip
+  echo
+  echo $BLUE
+else
+  echo $myip
+  echo
+  echo $RED
+fi
