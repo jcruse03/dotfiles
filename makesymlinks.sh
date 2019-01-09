@@ -38,7 +38,7 @@ echo "Creating symlink to dotfiles/config/qutebrowser/ in home directory."
 ln -s $dir/config/qutebrowser ~/.config
 
 # create symlink to pasta script fro urxvt, copy/paste script
-sudo cp pasta /usr/lib/urxvt/perl/pasta
+sudo cp ~/dotfiles/pasta /usr/lib/urxvt/perl/pasta
 sudo chmod +x /usr/lib/urxvt/perl/pasta
 # create source.sh for reloading all
 #rm mysource.sh
