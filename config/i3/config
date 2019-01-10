@@ -70,6 +70,9 @@ bindsym $mod+Shift+d exec rofi -show ssh
 #bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 #bindsym $mod+d exec i3-dmenu
 
+# lastpass menu for rofi
+bindsym $mod+p exec --no-startup-id ~/.scripts/lpass-menu a
+
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
