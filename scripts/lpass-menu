@@ -63,20 +63,21 @@ if [ $? -ne 0 ]; then
         exit
     fi
 
-    lpass login "$ZENITY_INPUT"
+    lpass login --trust "$ZENITY_INPUT"
 
     if [ $? -ne 0 ]; then
         zenity --error --text="Failed to login to LastPass. Please check your credentials and try again."
+b
         exit
     fi
 fi
 
-ROFI_SELECTION="$(lpass ls --format '•%an' | grep '•' | tr '•' '\n' | sed '/^$/d' | ${MENU_CMD} ${MENU_ARGS[@]})"
+ROFI_SELECTION="$(lpass ls --format '•%an {%au}' | grep '•' | tr '•' '\n' | sed '/^$/d' | ${MENU_CMD} ${MENU_ARGS[@]} | sed ' s/{[^}]*}//g' | sed 's/ *//g')"
 
 if [ -z "${ROFI_SELECTION}" ]; then
     exit
 fi
-
+echo "${ROFI_SELECTION}"
 lpass show -c --password "${ROFI_SELECTION}"
 
 if [ $? -ne 0 ]; then
