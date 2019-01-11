@@ -72,7 +72,7 @@ b
     fi
 fi
 
-ROFI_SELECTION="$(lpass ls --format '•%an {%au}' | grep '•' | tr '•' '\n' | sed '/^$/d' | ${MENU_CMD} ${MENU_ARGS[@]} | sed ' s/{[^}]*}//g' | sed 's/ *//g')"
+ROFI_SELECTION="$(lpass ls --format '•%an{%au}' | grep '•' | tr '•' '\n' | sed '/^$/d' | ${MENU_CMD} ${MENU_ARGS[@]} | sed 's/{[^}]*}//g')"
 
 if [ -z "${ROFI_SELECTION}" ]; then
     exit
