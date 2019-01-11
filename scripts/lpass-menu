@@ -57,17 +57,20 @@ fi
 lpass status
 
 if [ $? -ne 0 ]; then
-    ZENITY_INPUT="$(zenity --entry --text='Please enter your LastPass username:')"
+# Uncomment the comments in this section remove email in login line to
+# has this ask for the username on launch   
+# ZENITY_INPUT="$(zenity --entry --text='Please enter your LastPass username:')"
 
-    if [ -z "$ZENITY_INPUT" ]; then
-        exit
-    fi
+   # if [ -z "$ZENITY_INPUT" ]; then
+   #     exit
+   # fi
 
-    lpass login --trust "$ZENITY_INPUT"
+    lpass login --trust jcruse03@gmail.com 
+#"$ZENITY_INPUT"
 
     if [ $? -ne 0 ]; then
         zenity --error --text="Failed to login to LastPass. Please check your credentials and try again."
-b
+
         exit
     fi
 fi

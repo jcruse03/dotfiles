@@ -12,6 +12,7 @@ unclutter
 rofi
 qutebrowser
 numlockx
+zenity
 
 # command to enable touchpad touch to click on acer spin
 xinput set-prop 12 291 1
