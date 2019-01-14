@@ -2,10 +2,8 @@
 antergos-i3-meta
 i3-gaps
 feh
-nerd-fonts-roboto-mono
 urxvt
 urxvt-perls
-i3blocks-gaps-git
 gnome-screenshot
 compton
 unclutter
@@ -14,6 +12,21 @@ qutebrowser
 numlockx
 zenity
 bind-tools
+htop
+xorg-server
+xorg-xinit
+(dunst)
+lpass
+zenity
+xclip
+base-devel
+python
+
+#aur
+# install yay to interact wth aur
+# follow readme at https://github.com/Jguer/yay
+i3blocks-gaps-git
+nerd-fonts-roboto-mono
 
 # command to enable touchpad touch to click on acer spin
 xinput set-prop 12 291 1
