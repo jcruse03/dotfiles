@@ -37,6 +37,12 @@ echo "Creating symlink to dotfiles/config/qutebrowser/ in home directory."
 # the best way to think about ln is create a link to first argument in second argument
 ln -s $dir/config/qutebrowser ~/.config
 
+# handle directory for ranger config
+echo "Moving .config/ranger/ to $olddir"
+mv ~/.config/ranger/ $olddir
+echo "Creating symlink to dotfiles/config/ranger in ~/.config/ranger"
+ln -s $dir/config/ranger ~/.config
+
 # create symlink to pasta script fro urxvt, copy/paste script
 sudo cp ~/dotfiles/pasta /usr/lib/urxvt/perl/pasta
 sudo chmod +x /usr/lib/urxvt/perl/pasta

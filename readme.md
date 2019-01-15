@@ -2,7 +2,7 @@
 antergos-i3-meta
 i3-gaps
 feh
-urxvt
+rxvt-unicode-pixbuf #urxvt with icon and image preview support for ranger
 urxvt-perls
 gnome-screenshot
 compton
@@ -21,6 +21,9 @@ zenity
 xclip
 base-devel
 python
+sshfs
+ranger
+zathura
 
 #aur
 # install yay to interact wth aur
