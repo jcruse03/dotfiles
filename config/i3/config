@@ -108,7 +108,7 @@ bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+Shift+s layout stacking
-bindsym $mod+Shift+w layout tabbed
+bindsym $mod+Shift+t layout tabbed
 bindsym $mod+Shift+e layout toggle split
 
 # toggle tiling / floating
@@ -323,8 +323,10 @@ bindsym $mod+F7 exec mocp --previous
 bindsym $mod+F8 exec mocp --next
 
 # App shortcuts
-bindsym $mod+w exec "/usr/bin/google-chrome-stable"
-bindsym $mod+n exec "/usr/bin/nautilus"
+bindsym $mod+Shift+w exec "/usr/bin/google-chrome-stable"
+bindsym $mod+w exec "/usr/bin/qutebrowser"
+bindsym $mod+Shift+n exec "/usr/bin/nautilus"
+bindsym $mod+n exec "/usr/bin/urxvt -e ranger" 
 
 # Redirect sound to headphones
 bindsym $mod+m exec "/usr/local/bin/switch-audio-port"
