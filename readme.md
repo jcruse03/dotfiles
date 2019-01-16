@@ -16,7 +16,7 @@ htop
 xorg-server
 xorg-xinit
 (dunst)
-lpass
+lastpass-cli
 zenity
 xclip
 base-devel
@@ -24,6 +24,7 @@ python
 sshfs
 ranger
 zathura
+Zathura-PDF-MuPDFi
 
 #aur
 # install yay to interact wth aur
